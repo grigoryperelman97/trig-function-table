@@ -1,2 +1,7 @@
-program: trigFunctionTable.c
-	gcc trigFunctionTable.c -o trigFunctionTable -lm
+NAME = trigFunctionTable
+OBJECTS = trigFunctionTable.c
+
+program: $(OBJECTS)
+	gcc $(OBJECTS) -o $(NAME) -lm
+	./$(NAME)
+	rm $(NAME)
