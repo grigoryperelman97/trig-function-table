@@ -47,7 +47,7 @@ int getRows(){
 	else printf("Input not an integer. Exiting...\n");
 }
 
-double parseXClimbCoefficientInRelationToTheFunctionOfXAxisOnATwoDimensionalGraphOfXVsTheFunctionOfX(double xMin, double xMax, int rows){
+double xIncrease(double xMin, double xMax, int rows){
 	return (xMax - xMin) / (rows - 1);
 }
 
@@ -64,7 +64,7 @@ void tableGenerator(double xMin, double xMax, int rows){
 	printf("%9s%10s%13s%10s%13s%10s%13s\n", "X", "sin3T(x)", "error1", "cos3T(x)", "error2", "sin3T(2x)", "error3");
 	for (int i = 0; i < rows; i++){
 		printf("%9lf%10lf%13lf%10lf%13lf%10lf%13lf\n", currentX, sin3T(currentX), (sin(currentX) - sin3T(currentX)), cos3T(currentX), (cos(currentX) - cos3T(currentX)), sin3T(2 * currentX), (sin(2 * currentX) - sin3T(2 * currentX)));
-		currentX += parseXClimbCoefficientInRelationToTheFunctionOfXAxisOnATwoDimensionalGraphOfXVsTheFunctionOfX(xMin, xMax, rows);
+		currentX += xIncrease(xMin, xMax, rows);
 	};
 }
 
