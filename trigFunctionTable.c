@@ -18,7 +18,10 @@ double getXMin(){
 		}
 		else return xMin;
 	}
-	else printf("Input not a number. Exiting...\n");
+	else {
+		printf("Input not a number. Exiting...\n");
+		return 0;
+	}
 }
 //get the value of xMax from the user
 double getXMax(){
@@ -31,7 +34,10 @@ double getXMax(){
 		}
 		else return xMax;
 	}
-	else printf("Input not a number. Exiting...\n");
+	else {
+		printf("Input not a number. Exiting...\n");
+		return 0;
+	}
 }
 
 int getRows(){
@@ -44,7 +50,10 @@ int getRows(){
 		}
 		else return rows;
 	}
-	else printf("Input not an integer. Exiting...\n");
+	else {
+		printf("Input not an integer. Exiting...\n");
+		return 0;
+	}
 }
 
 double xIncrease(double xMin, double xMax, int rows){
